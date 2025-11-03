@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordleClone.MainPage"
+             Title="Wordle">
+    
+    <Grid RowDefinitions="2*,*">
+
+        <VerticalStackLayout Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Spacing="5">
+            
+            <Grid x:Name="GameBoardGrid"
+                  ColumnSpacing="5"
+                  RowSpacing="5"
+                  ColumnDefinitions="60,60,60,60,60"
+                  RowDefinitions="60,60,60,60,60,60">
+                
+                </Grid>
+        </VerticalStackLayout>
+        
+            
+        <VerticalStackLayout Grid.Row="1" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Spacing="6" Padding="6,0">
+            
+            <Grid ColumnSpacing="6" ColumnDefinitions="*,*,*,*,*,*,*,*,*,*">
+                <Button Grid.Column="0" Text="Q" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="1" Text="W" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="2" Text="E" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="3" Text="R" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="4" Text="T" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="5" Text="Y" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="6" Text="U" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="7" Text="I" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="8" Text="O" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="9" Text="P" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+            </Grid>
+            
+            <Grid ColumnSpacing="6" ColumnDefinitions=".5*,*,*,*,*,*,*,*,*,.5*">
+                <Button Grid.Column="1" Text="A" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="2" Text="S" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="3" Text="D" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="4" Text="F" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="5" Text="G" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="6" Text="H" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="7" Text="J" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="8" Text="K" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="9" Text="L" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+            </Grid>
+            
+            <Grid ColumnSpacing="6" ColumnDefinitions="1.5*,*,*,*,*,*,*,*,1.5*">
+                <Button Grid.Column="0" Text="ENTER" Clicked="OnEnterClicked" Style="{StaticResource EnterDelButton}" />
+                <Button Grid.Column="1" Text="Z" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="2" Text="X" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="3" Text="C" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="4" Text="V" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="5" Text="B" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="6" Text="N" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="7" Text="M" Clicked="OnKeyboardClicked" Style="{StaticResource LetterButton}" />
+                <Button Grid.Column="8" Text="DEL" Clicked="OnDeleteClicked" Style="{StaticResource EnterDelButton}" />
+            </Grid>
+
+            <VerticalStackLayout.Resources>
+                <Style TargetType="Button" x:Key="LetterButton">
+                    <Setter Property="HeightRequest" Value="45" />
+                    <Setter Property="CornerRadius" Value="5" />
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="BackgroundColor" Value="#f0f0f0" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontFamily" Value="OpenSansRegular" />
+                    <Setter Property="HorizontalOptions" Value="Fill" />
+                </Style>
+                
+                <Style TargetType="Button" x:Key="EnterDelButton">
+                    <Setter Property="HeightRequest" Value="45" />
+                    <Setter Property="CornerRadius" Value="5" />
+                    <Setter Property="FontSize" Value="12" />
+                    <Setter Property="BackgroundColor" Value="#d0d0d0" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="FontFamily" Value="OpenSansRegular" />
+                    <Setter Property="HorizontalOptions" Value="Fill" />
+                </Style>
+            </VerticalStackLayout.Resources>
+
+        </VerticalStackLayout>
+        
+    </Grid>
+
+</ContentPage>
